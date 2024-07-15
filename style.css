@@ -1,0 +1,295 @@
+body {
+    font-family: 'Karla', sans-serif;
+}
+
+.header-title h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+}
+
+span {
+    color: hsl(169, 82%, 27%);
+}
+
+.container {
+    background-color: hsl(148, 38%, 91%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140vh;
+    padding: 1rem;
+}
+.box {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 10rem;
+    margin-top: 10rem;
+}
+
+label {
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    color: hsl(187, 24%, 22%);
+}
+
+.names-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+#email {
+    width: 100%;
+}
+
+.querybox {
+    display: flex;
+    flex-direction: column;
+    gap: .1rem;
+    width: 100%;
+}
+
+.queryInput {
+    border: 1px solid;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: .7rem;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    border-color: hsl(186, 15%, 59%);
+}
+
+.queryInput input[type="radio"] {
+    margin-right: 1rem; /* Add space before the radio button */
+    transform: scale(1.5); /* Make the radio button slightly larger */
+}
+
+.textbox {
+    padding: .7rem;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    border-color: hsl(186, 15%, 59%);
+    border-width: 1px;
+}
+
+.textbox:focus-visible {
+    outline: hsl(169, 82%, 27%) solid 1px;
+}
+
+.textbox-email {
+    padding: .7rem;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    border-width: 1px;
+}
+
+textarea {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+.consent {
+    font-size: 16px;
+    padding: .5rem;
+}
+
+.consent input {
+    height: 1.2rem; /* Increase checkbox height */
+    width: 1.2rem; /* Increase checkbox width */
+    margin-right: 0.5rem; /* Add space before the checkbox */
+    margin-bottom: 1rem;
+}
+
+.submitbtn {
+    background-color: hsl(169, 82%, 27%);
+    height: 3rem;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.submitbtn:hover {
+    transition-duration: 0.4s;
+    background-color: hsl(187, 24%, 22%);
+}
+
+/* Error styles */
+.error-message {
+    display: none;
+    color: red;
+    font-size: 15px;
+    margin-bottom: 2rem;
+}
+
+input.error, textarea.error {
+    border-color: red;
+}
+
+/* Custom alert box styles */
+.alert-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(187, 24%, 22%);
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 10px;
+    width: 500px;
+    padding: 1.2rem;
+    z-index: 1000;
+    display: none; /* Initially hidden */
+}
+
+.alert-box h2 {
+    color: white;
+    font-size: 1rem;
+}
+
+.alert-box p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: hsl(186, 15%, 59%);
+}
+
+.alert-box .alert-button {
+    background-color: hsl(169, 82%, 27%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.alert-box .alert-button:hover {
+    background-color: hsl(187, 24%, 22%);
+}
+
+.alert-box .alert-icon {
+    font-size: 1.2rem;
+    color: hsl(186, 15%, 59%);
+    margin-top: .1rem;
+    margin-bottom: .5rem;
+}
+
+.alerticon-message {
+    display: flex;
+    gap: 1rem;
+}
+
+/* 
+---------- */
+
+.custom-radio {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    width: 20px;
+    height: 21px;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 50%;
+    margin-right: 1rem;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-radio::before {
+    content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMSIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDIwIDIxIj48cGF0aCBmaWxsPSIjMEM3RDY5IiBkPSJNMTAgLjc1YTkuNzUgOS43NSAwIDEgMCA5Ljc1IDkuNzVBOS43NiA5Ljc2IDAgMCAwIDEwIC43NXpNMTAgMThhOC4yNSA4LjI1IDAgMSAxIDguMjUtOC4yNUE4LjI2IDguMjYgMCAwIDEgMTAgMTh6bTUuMjUtOC4yNWE1LjI1IDUuMjUgMCAxIDEtMTAuNDk5IDAgNS4yNSA1LjI1IDAgMCAxIDEwLjQ5OSAwWiIvPjwvc3ZnPg==');
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 375px) {
+    .container{
+        height: 155vh;
+    }
+    .box {
+        padding: .9rem;
+        width: 100rem;
+    }
+    .textbox {
+        width: 20rem;
+    }
+    .textbox-email,
+    textarea,
+    .submitbtn {
+        width: 100%;
+    }
+    .alert-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -310%);
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        
+    }
+    .box {
+        padding: 2rem;
+        
+    }
+
+    .textbox {
+        width: 26rem;
+    }
+    .textbox-email {
+        width: 10rem;
+    }
+    textarea {
+        width: 53rem;
+        height: 10rem;
+    }
+    .submitbtn {
+        width: 53rem;
+    }
+    .querybox {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .queryInput {
+        width: calc(100% - 2rem); 
+    }
+    .alert-box {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -420%);
+        width: 500px;
+        padding: 1.2rem;
+        z-index: 1000;
+    }
+    .error-message {
+        display: none;
+        color: red;
+        font-size: 15px;
+        margin-bottom: 2rem;
+    }
+}
+
